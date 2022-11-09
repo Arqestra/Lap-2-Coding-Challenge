@@ -33,7 +33,7 @@ services:
       - "dbdata:/var/lib/postgresql/data"
     environment: 
       - POSTGRES_DB=telegraph
-      - POSTGRES_USER= manda
+      - POSTGRES_USER=manda
       - POSTGRES_PASSWORD=tele-ph
      
 volumes:

@@ -1,18 +1,18 @@
 {
-    "description": "LAP 2 debug assignment",
-    "scripts": {
-      "start": "node index.js",
-      "dev": "nodemon index.js",
-      "seedDev": "node dbConfig/seed.js"
-    },
-    "author": "futureproof",
-    "license": "ISC",
-    "devDependencies": {
-      "nodemon": "^2.0.4"
-    },
-    "dependencies": {
-      "cors": "^2.8.5",
-      "express": "^4.17.1",
-      "pg": "^8.3.3"
-    }
+  "description": "LAP 2 debug assignment",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seedDev": "node dbConfig/seedDev.js"
+  },
+  "author": "futureproof",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.3.3"
   }
+}
