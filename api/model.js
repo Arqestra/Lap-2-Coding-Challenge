@@ -12,7 +12,7 @@ module.exports = class Post {
         return new Promise (async (resolve, reject) => {
             try {
                 const result = await db.query('SELECT * FROM posts;')
-                const allPosts = result.rows.map(a => new Post(d))
+                const allPosts = result.rows.map(a => ({id: a.id, title: a.title, name: a.name, content: a.content}))
                 resolve(allPosts);
             } catch (err) {
                 reject("Error retrieving posts")
@@ -35,11 +35,11 @@ module.exports = class Post {
     static create(title, name, content){
         return new Promise (async (resolve, reject) => {
             try {
-                let dogData = await db.query(`INSERT INTO dogs (title, name, content) VALUES ($1, $2) RETURNING *;`, [ title, name, content ]);
-                let newDog = new Dog(dogData.rows[0]);
-                resolve (newDog);
+                let postData = await db.query(`INSERT INTO posts (title, name, content) VALUES ($1, $2, $3) RETURNING *;`, [ title, name, content ]);
+                let newPost = new Post(postData.rows[0]);
+                resolve (newPost);
             } catch (err) {
-                reject('Error creating dog');
+                reject('Error creating post');
             }
         });
     }

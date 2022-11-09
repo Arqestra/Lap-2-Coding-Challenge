@@ -6,6 +6,7 @@ server.use(cors());
 server.use(express.json());
 
 const routes = require('./route')
+
 server.use('/route', routes)
 
 server.get('/', (req, res) => res.send('Welcome to the Anonymous'))
