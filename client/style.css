@@ -1,3 +1,45 @@
-input#title {
+body {
+    display: flex;
+    justify-content: center;
+}
+
+div.container-sm {
+    background-color: antiquewhite !important;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+
+input {
     outline: none !important;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+    border: none;
+    
+}
+
+input#title {
+    font-size: 40px;
+    border-bottom: 1px solid grey;
+}
+
+input#name {
+    transition: 0.5s;
+    font-size: 20px;
+    border: 1px transparent solid;
+    border-radius: 10px;
+}
+
+
+
+textarea {
+    background-color: antiquewhite;
+    outline: none;
+    border: none;
+    width: 450px;
+    resize: none;
+}
+
+section#publish {
+    float: right;
 }
